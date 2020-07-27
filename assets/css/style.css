@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'Bellota-LightItalic';
+    src: url('../fonts/Bellota-LightItalic.otf');
+}
+@font-face {
+    font-family: 'Bellota-BoldItalic';
+    src: url('../fonts/Bellota-BoldItalic.otf');
+}
+@font-face {
+    font-family: 'Bellota-Bold';
+    src: url('../fonts/Bellota-Bold.otf');
+}
+@font-face {
+    font-family: 'Bellota-Regular';
+    src: url('../fonts/Bellota-Regular.otf');
+}
+body {
+    line-height: 17px;
+    background: beige;
+}
+.top_bar {
+    width: 100%;
+    min-width: 1000px;
+    height: 60px;
+    background-color: #342b38;
+    border-bottom: 0.25em solid #e8505b;
+    margin: 0 0 10px 0;
+    display: inline-flex;
+    position: fixed;
+    z-index: 10;
+}
+
+.logo a{
+    font-family: 'Bellota-BoldItalic', sans-serif;
+    margin-left: 20%;
+    font-size: 300%;
+    position: relative;
+    top: 18px;
+    color: #ffffff;
+    text-shadow: aliceblue 0.5px 0.5px 0px;
+}
+a:hover {
+    text-decoration: none;
+}
+nav {
+    float: right;
+    top: 10px;
+    right: 10%;
+    position: absolute;
+    margin: 10px;
+}
+
+nav a{
+    font-family: 'Bellota-Bold', sans-serif;
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 120%;
+    margin: 20px;
+}
+nav a:hover {
+    border-bottom: 2px solid #f3ecc2;
+    color: #ffffff;
+}
+.wrapper {
+    margin:0 auto;
+    top: 100px;
+    position: relative;
+    padding: 0 10px;
+    width: 75%;
+    min-width: 950px;
+}
+
+.column {
+    border-radius: 4px;
+    padding: 10px 20px;
+    background-color: #fff;
+    margin-bottom: 40px;    
+    border: 1px solid #d3d3d3;
+    box-shadow: 2px 2px 1px #d3d3d3;
+    z-index: -1;
+}
+
+.user_details {
+    background: linear-gradient(to bottom, #f8060659, rgb(241 5 70)), no-repeat;
+    background-size: cover;
+    width: 22%;
+    float: left;
+    margin-bottom: 20px;
+
+}
+.profile_pic {
+    border: 7px solid #fff;
+    float: left;
+    margin-right: 20px;
+    position: relative;
+    top: -30px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.user_details_left_right {
+    font-family: 'Bellota-Bold', sans-serif;
+    color: #ffffff;
+    width: 125px;
+    display: inline-block;
+    position: absolute;
+}
+.user_details_left_right a h3 {
+    color: #ffffff;
+    text-shadow: #73B6E2 0.5px 0.5px 0px;
+}
+.profile_pic_mc {
+    margin-right: 5px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.main_column {
+    float: right;
+    width: 68%;
+    z-index: -1;
+    min-height: 60px;
+}
+.post_form {
+    width : 100%;
+}
+.post_form textarea {
+    width: 75%;
+    height: 60px;
+    border-radius: 5px;
+    margin-right: 5px;
+    border: 1px solid #d3d3d3;
+    padding: 5px;
+}
+.post_form input[type="submit"] {
+    width: 11%;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #e8505b;
+    font-family: 'Bellota-Bold', sans-serif;
+    color: #ffffff;
+    text-shadow: #73B6E2 0.5px 0.5px 0px;
+    font-size: 120%;
+    position: absolute;
+}
+.post_form input[type="submit"]:active {
+    padding: 5px 4px 4px 5px;
+}
