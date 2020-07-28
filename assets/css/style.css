@@ -147,3 +147,27 @@ nav a:hover {
 .post_form input[type="submit"]:active {
     padding: 5px 4px 4px 5px;
 }
+.status_post {
+    width: 98%;
+    font-size: 15px;
+    padding: 0px 5px;
+    min-height: 75px;
+    background: #f5eeee96;
+    border-radius: 10px;
+    border: 1px solid #fde5e6;
+    margin-bottom: 20px;
+}
+.post_profile_pic img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.post_profile_pic {
+    float: left;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.posted_by{
+    margin-top: 10px;
+}
