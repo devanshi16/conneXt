@@ -171,3 +171,13 @@ nav a:hover {
 .posted_by{
     margin-top: 10px;
 }
+.comment_section {
+    padding: 0 5px 5px 5px;
+}
+#comment_form textarea {
+    border-radius: 50%;
+    width: 85%;
+    height: 35px;
+    font-size: 14px;
+    margin: 3px 3px 3px 5px;
+}
