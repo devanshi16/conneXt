@@ -106,14 +106,19 @@ class Post {
 						?>
 						<script>	
 							function toggle<?php echo $id; ?>() {
-								var element = document.getElementById("toggleComment<?php echo $id; ?>");
-								if(element.style.display == "block")
-									elemnt.style.display = "none";
-								else
-									element.style.display = "block";
+								var target = $(event.target);
+								if(!target.is("a")) {
+									var element = document.getElementById("toggleComment<?php echo $id; ?>");
+										if(element.style.display == "block")
+											elemnt.style.display = "none";
+										else
+											element.style.display = "block";
+								}
 							}
 						</script>
 						<?php
+						$comments_check = mysqli_query($this->con, "SELECT * FROM comments WHERE post_id='$id'");
+						$comments_check_num = mysqli_num_rows($comments_check);
 						//Timeframe
 						$date_time_now = date("Y-m-d H:i:s");
 						$start_date = new DateTime($date_time); //Time of post
@@ -190,10 +195,17 @@ class Post {
 									<div id='post_body'>
 										$body
 										<br>
+										<br>
+										<br>
+									</div>
+									<div class = 'newsfeedPostOptions' style='color: #1e7ddc'>
+										&nbsp;&nbsp;Comments ($comments_check_num)&nbsp;&nbsp;&nbsp;&nbsp;
+										<iframe src='like.php?post_id=$id' scrolling='no' frameborder='0' width='120px' height='17px' style='background:#f5eeee96'></iframe>
 									</div>
 									<div class='post_comment' id='toggleComment$id' style='display:none;'>
-										<iframe src='comment_frame.php?post_id=$id' class='comment_iframe' frameborder='0' width='100%' max-height='250px'></iframe>
-									</div>	 
+										<iframe src='comment_frame.php?post_id=$id' id='comment_iframe' frameborder='0' width='100%' max-height='250px' style='background:#f5eeee96'></iframe>
+									</div>	
+									<br> 
 
 								</div>
 								

@@ -18,6 +18,9 @@ body {
     line-height: 17px;
     background: beige;
 }
+a {
+    text-decoration: none;
+}
 .top_bar {
     width: 100%;
     min-width: 1000px;
@@ -168,16 +171,49 @@ nav a:hover {
     margin-top: 10px;
     margin-left: 10px;
 }
-.posted_by{
+.posted_by{ 
     margin-top: 10px;
+}
+#comment_iframe {
+	max-height: 250px;	
+	width: 100%;
+    margin-top: 5px;
+    background-color:#f5eeee96;
 }
 .comment_section {
     padding: 0 5px 5px 5px;
 }
 #comment_form textarea {
-    border-radius: 50%;
+    border-radius: 50px;
     width: 85%;
     height: 35px;
     font-size: 14px;
     margin: 3px 3px 3px 5px;
+}
+#comment_form input[type="submit"] {
+	border:none;
+	border-radius: 50px;
+    background-color: #e8505b;
+    font-family: 'Bellota-Bold', sans-serif;
+    color: #ffffff;
+    text-shadow: #73B6E2 0.5px 0.5px 0px;
+    font-size: 120%;
+	width: 13%;
+	height: 35px;
+	margin-top: 3px;
+	position: absolute;
+}
+.comment_like {
+    color: #e8505b;
+    border: none;
+    font-size: 14px;
+    background-color:transparent;
+    padding: 0;
+    height: auto;
+    width: auto;
+    margin: 0;
+}
+.like_value {
+    display: inline;
+    font-size: 14px;
 }
