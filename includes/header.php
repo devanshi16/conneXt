@@ -1,5 +1,8 @@
 <?php  
 require 'config/config.php';
+include("includes/classes/User.php");
+include("includes/classes/Post.php");
+
 if (isset($_SESSION['username'])) {
 	$userLoggedIn = $_SESSION['username'];
 	$user_details_query = mysqli_query($con, "SELECT * FROM users WHERE username='$userLoggedIn'");
@@ -31,7 +34,7 @@ else {
             <a href = "index.php"> Home </a>
             <a href = "#"> Messages </a>
             <a href = "#"> Notifications </a>
-            <a href = "#"> Users </a>
+            <a href = "requests.php"> Users </a>
             <a href = "#"> Settings </a>
             <a href = "includes/handlers/logout.php"> Log out</a>
 
